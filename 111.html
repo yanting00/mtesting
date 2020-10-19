@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="login.css">
+		<title>我的网页</title>
+	
+		<script type="text/javascript">
+			function check_login(){
+				if(!document.loginform.username.value){
+					alert('对不起，用户名不能为空！');
+					return false;
+				}
+				if(!document.loginform.pwd.value){
+					alert('对不起，密码不能为空！');
+					return false;
+				}
+				return true;
+			}
+
+		</script>
+	</head>
+	<body>
+		<center>
+			<form action="login.php" method="post">
+				<table border="1">
+					<tr>
+						<td>*用户名：</td>
+						<td><input type="text" style="color:#ff3300" name="username"></td>
+					</tr>
+					<tr>
+						<td>密码：</td>
+						<td><input type="password" name="pwd"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input type="submit" value="登录" onclick="
+							  return check_login();">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</center>
+	</body>
+</html>
